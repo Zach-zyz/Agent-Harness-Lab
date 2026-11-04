@@ -1,0 +1,8 @@
+{
+  "id": "dev_safe_member_path",
+  "issue": "safe_member_path only rejects leading slashes. Treat archive member names as slash-separated paths and return the resolved destination beneath root. Reject empty names, NUL bytes, absolute paths, Windows drive prefixes, dot/dot-dot components, backslash traversal, and paths that escape through an existing symlink, all with ValueError.",
+  "visible_command": "python -m pytest -q tests/test_visible.py",
+  "fail_to_pass": [".grader_tests/test_f2p.py"],
+  "pass_to_pass": [".grader_tests/test_p2p.py"],
+  "test_timeout_seconds": 30
+}

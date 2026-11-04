@@ -1,0 +1,254 @@
+{
+  "clamp_zero": {
+    "details": {
+      "changed_paths": [
+        "numkit/range.py"
+      ],
+      "expected_tests": {
+        "f2p": [
+          ".grader_tests/test_f2p.py::test_zero_lower_and_upper_bounds"
+        ],
+        "p2p": [
+          ".grader_tests/test_p2p.py::test_nonzero_and_missing_bounds_still_work",
+          ".grader_tests/test_p2p.py::test_reversed_bounds_still_raise"
+        ]
+      },
+      "f2p": {
+        "process_returncode": 0,
+        "returncode": 0,
+        "stderr": "No entry for terminal type \"dumb\";\nusing dumb terminal settings.\n",
+        "stdout": ".                                                                        [100%]\n1 passed in 0.31s\n",
+        "test_report": {
+          "collected": [
+            ".grader_tests/test_f2p.py::test_zero_lower_and_upper_bounds"
+          ],
+          "collection_issues": [],
+          "completed": true,
+          "deselected": [],
+          "exitstatus": 0,
+          "expected_node_ids": [
+            ".grader_tests/test_f2p.py::test_zero_lower_and_upper_bounds"
+          ],
+          "session_exitstatus": 0,
+          "tests": [
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_zero_lower_and_upper_bounds",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "setup"
+            },
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_zero_lower_and_upper_bounds",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "call"
+            },
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_zero_lower_and_upper_bounds",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "teardown"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "header_paths": [
+        "numkit/range.py"
+      ],
+      "p2p": {
+        "process_returncode": 0,
+        "returncode": 0,
+        "stderr": "No entry for terminal type \"dumb\";\nusing dumb terminal settings.\n",
+        "stdout": "..                                                                       [100%]\n2 passed in 0.31s\n",
+        "test_report": {
+          "collected": [
+            ".grader_tests/test_p2p.py::test_nonzero_and_missing_bounds_still_work",
+            ".grader_tests/test_p2p.py::test_reversed_bounds_still_raise"
+          ],
+          "collection_issues": [],
+          "completed": true,
+          "deselected": [],
+          "exitstatus": 0,
+          "expected_node_ids": [
+            ".grader_tests/test_p2p.py::test_nonzero_and_missing_bounds_still_work",
+            ".grader_tests/test_p2p.py::test_reversed_bounds_still_raise"
+          ],
+          "session_exitstatus": 0,
+          "tests": [
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_nonzero_and_missing_bounds_still_work",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "setup"
+            },
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_nonzero_and_missing_bounds_still_work",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "call"
+            },
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_nonzero_and_missing_bounds_still_work",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "teardown"
+            },
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_reversed_bounds_still_raise",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "setup"
+            },
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_reversed_bounds_still_raise",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "call"
+            },
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_reversed_bounds_still_raise",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "teardown"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "protected_hits": [],
+      "symlink_hits": []
+    },
+    "f2p_passed": true,
+    "p2p_passed": true,
+    "patch_valid": true,
+    "protected_paths_clean": true,
+    "resolved": true
+  },
+  "parse_bool": {
+    "details": {
+      "changed_paths": [
+        "boolkit/parser.py"
+      ],
+      "expected_tests": {
+        "f2p": [
+          ".grader_tests/test_f2p.py::test_all_documented_false_forms",
+          ".grader_tests/test_f2p.py::test_invalid_values_raise"
+        ],
+        "p2p": [
+          ".grader_tests/test_p2p.py::test_true_forms_and_bool_inputs_still_work"
+        ]
+      },
+      "f2p": {
+        "process_returncode": 0,
+        "returncode": 0,
+        "stderr": "No entry for terminal type \"dumb\";\nusing dumb terminal settings.\n",
+        "stdout": "..                                                                       [100%]\n2 passed in 0.31s\n",
+        "test_report": {
+          "collected": [
+            ".grader_tests/test_f2p.py::test_all_documented_false_forms",
+            ".grader_tests/test_f2p.py::test_invalid_values_raise"
+          ],
+          "collection_issues": [],
+          "completed": true,
+          "deselected": [],
+          "exitstatus": 0,
+          "expected_node_ids": [
+            ".grader_tests/test_f2p.py::test_all_documented_false_forms",
+            ".grader_tests/test_f2p.py::test_invalid_values_raise"
+          ],
+          "session_exitstatus": 0,
+          "tests": [
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_all_documented_false_forms",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "setup"
+            },
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_all_documented_false_forms",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "call"
+            },
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_all_documented_false_forms",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "teardown"
+            },
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_invalid_values_raise",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "setup"
+            },
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_invalid_values_raise",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "call"
+            },
+            {
+              "nodeid": ".grader_tests/test_f2p.py::test_invalid_values_raise",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "teardown"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "header_paths": [
+        "boolkit/parser.py"
+      ],
+      "p2p": {
+        "process_returncode": 0,
+        "returncode": 0,
+        "stderr": "No entry for terminal type \"dumb\";\nusing dumb terminal settings.\n",
+        "stdout": ".                                                                        [100%]\n1 passed in 0.31s\n",
+        "test_report": {
+          "collected": [
+            ".grader_tests/test_p2p.py::test_true_forms_and_bool_inputs_still_work"
+          ],
+          "collection_issues": [],
+          "completed": true,
+          "deselected": [],
+          "exitstatus": 0,
+          "expected_node_ids": [
+            ".grader_tests/test_p2p.py::test_true_forms_and_bool_inputs_still_work"
+          ],
+          "session_exitstatus": 0,
+          "tests": [
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_true_forms_and_bool_inputs_still_work",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "setup"
+            },
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_true_forms_and_bool_inputs_still_work",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "call"
+            },
+            {
+              "nodeid": ".grader_tests/test_p2p.py::test_true_forms_and_bool_inputs_still_work",
+              "outcome": "passed",
+              "wasxfail": false,
+              "when": "teardown"
+            }
+          ],
+          "version": 1
+        }
+      },
+      "protected_hits": [],
+      "symlink_hits": []
+    },
+    "f2p_passed": true,
+    "p2p_passed": true,
+    "patch_valid": true,
+    "protected_paths_clean": true,
+    "resolved": true
+  }
+}

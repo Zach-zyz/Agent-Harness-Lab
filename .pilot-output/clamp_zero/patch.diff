@@ -1,0 +1,16 @@
+diff --git a/numkit/range.py b/numkit/range.py
+index c266026..4248d82 100644
+--- a/numkit/range.py
++++ b/numkit/range.py
+@@ -1,8 +1,8 @@
+ def clamp(value, lower=None, upper=None):
+-    if lower and upper and lower > upper:
++    if lower is not None and upper is not None and lower > upper:
+         raise ValueError("lower bound exceeds upper bound")
+-    if lower and value < lower:
++    if lower is not None and value < lower:
+         value = lower
+-    if upper and value > upper:
++    if upper is not None and value > upper:
+         value = upper
+     return value

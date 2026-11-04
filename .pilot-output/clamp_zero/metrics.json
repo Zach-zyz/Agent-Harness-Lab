@@ -1,0 +1,104 @@
+{
+  "active_seconds": 0.3296059590065852,
+  "api_latency_and_retry_wait_exempted": false,
+  "input_tokens": 1140,
+  "max_active_seconds": 480.0,
+  "max_model_calls": 12,
+  "max_tokens": 120000,
+  "model_calls": 4,
+  "output_tokens": 205,
+  "patch_nonempty": true,
+  "provider": {
+    "http_429": 0,
+    "http_5xx": 0,
+    "http_attempts": 0,
+    "logical_calls": 4,
+    "pacing_wait_seconds": 0.0,
+    "provider_requested_wait_seconds": 0.0,
+    "provider_wait_seconds": 0.0,
+    "reasoning_usage_reported_attempts": 0,
+    "reported_reasoning_tokens": 0,
+    "reported_total_tokens": 1345,
+    "request_seconds": 0.0,
+    "reserved_unknown_tokens": 0,
+    "retries": 0,
+    "returned_models": [
+      "deterministic-replay"
+    ],
+    "unknown_usage_attempts": 0,
+    "usage_accounting_complete": true
+  },
+  "resolved": true,
+  "run": {
+    "action_mode": "replay",
+    "backend": "replay",
+    "base_url": null,
+    "config": {
+      "auto_test_after_write": true,
+      "bootstrap_context": true,
+      "max_active_seconds": 480,
+      "max_model_calls": 12,
+      "max_output_tokens": 2048,
+      "max_total_tokens": 120000,
+      "temperature": 0.2,
+      "top_p": 1.0
+    },
+    "config_sha256": "b9c268a359996b5dd4df05cbca6cb43eeb4ba54d62c8750c52775a96c7b60535",
+    "identity_version": 2,
+    "model_id": "deterministic-replay",
+    "reasoning_effort": null,
+    "runtime": {
+      "dependencies": {
+        "pytest": "9.0.2"
+      },
+      "executable_sha256": "2d96eb826dc74db4fcd5da6dde045a6fa145e292e07e69d1bdd1a19fa90ffc22",
+      "implementation": "CPython",
+      "machine": "arm64",
+      "platform": "macOS-26.6.2-arm64-arm-64bit",
+      "python": "3.12.14 (main, Sep  1 2026, 14:09:38) [Clang 22.1.3 ]"
+    },
+    "sampling": {
+      "max_output_tokens": 2048,
+      "temperature": 0.2,
+      "top_p": 1.0
+    },
+    "seed": 2026,
+    "source_files": {
+      "eval/__init__.py": "daf7cddade7150d147fb4e9430606bba934de3b38adc3017db3db7e8fd38cd1f",
+      "eval/_pytest_runner.py": "a01e8b680c68e26c0f87d219e08734019ac1892239e6edcc6260ea8687502ceb",
+      "eval/check_endpoint.py": "657f9e6372f88f865cbc3d31a72b2d5a7b4087c46aafd286e6321920dcc71f4a",
+      "eval/report.py": "7942a7a0c21710b9e42e85dfb9fc9638fd2597faf5e90bd125b3f94fe2f4990f",
+      "eval/run_dev.py": "26769f8ff4327a547d291ffda600b4d8bb1f4b32b98419dc4d3856548a3123bf",
+      "eval/run_identity.py": "c053866e767b60c7a51648ecaf471f9e0a3c70c456478e55efccb2b982a90bc7",
+      "eval/run_paired.py": "7d0a3b763a7442f87bfeab5914046717a087d7dcbdbc6a11ccdb94d02649afe0",
+      "eval/run_toy.py": "7654ebbe287edf31881b3613b2da4360856d24ccc93abcf4eb8bce5fcb470729",
+      "eval/validate_patch.py": "3df9e85cec1ea3da629eb4a0a6579570fe5fe6992b17c698b9bac7e711f1337d",
+      "harness/__init__.py": "780c8e76023d649896084feaa656a46f9c5460609f7a49d99412379fcd6539a9",
+      "harness/agent.py": "ba00d7b4562e490c24bebed5a9f1f436002779cb10e626cd04757b48d626b060",
+      "harness/budget.py": "f5aee0e26f13e0e25bc158a6c7a1b0c969b9dd3de4e4a66b6fdb55891313fc3c",
+      "harness/localize.py": "498069b654a3f4acb5cbafa3216fc4024b38a67b956543886f50d561722d59b5",
+      "harness/model_client.py": "6a3bf823993ff43e081da7fe16cd304651d2c97b79804e3a59c8532fa3fa593b",
+      "harness/patch.py": "6a86ec771a953bbdee94df14385c2395034bd12205c95d848dcd73a1f8bb1ebe",
+      "harness/sandbox.py": "92b8d5e42c085d1721cc4a06834316044267d1b34a68bf9fe62bba1950d5e639",
+      "harness/state.py": "30089d51773b4366022dfbc69aa3ef81e396f1e426c9f8c35d43626bb7560af0",
+      "harness/tools.py": "234c2020fd736a2011b6804b9703ea25670db93cabd987a7fb67c9e99cca8e16",
+      "pyproject.toml": "21c85375ca0b14d670dfe9890f33f48eff917d39f420cf827c4f9bc5bb062e9a",
+      "requirements.lock": "693d97bdd0fb5283060c3efadf25a90d0c3b59be09b25fac59f5f1c68a1f993b",
+      "run_agent.py": "924aafe5fc33dd8994c286bf3718f77c147b805fcb48aa1050cd2f3528f0809b"
+    },
+    "source_sha256": "5afef4ae509c7f5ad938800b61ccdaf4090c0ae14e96cd951262d69ed82ccbb6",
+    "task_input_sha256": "9d9b46dabeed37c0851a08866b33c5dcf20486ed93f8a3733e91ed5335c6d197"
+  },
+  "termination_reason": "finished",
+  "test_invocations": 3,
+  "test_seconds": 0.2809586249059066,
+  "token_cap_certified": true,
+  "tool_calls": {
+    "list_files": 1,
+    "read_file": 1,
+    "run_tests": 3,
+    "write_file": 1
+  },
+  "total_tokens": 1345,
+  "visible_tests_passed": true
+}

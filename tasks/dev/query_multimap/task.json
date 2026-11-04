@@ -1,0 +1,8 @@
+{
+  "id": "dev_query_multimap",
+  "issue": "parse_query loses repeated parameters and blank values. Return a dict mapping each decoded key to a list of all decoded values in encounter order. Preserve blank values, standard percent/plus decoding, key insertion order, and return an empty dict for an empty query.",
+  "visible_command": "python -m pytest -q tests/test_visible.py",
+  "fail_to_pass": [".grader_tests/test_f2p.py"],
+  "pass_to_pass": [".grader_tests/test_p2p.py"],
+  "test_timeout_seconds": 30
+}

@@ -1,0 +1,8 @@
+{
+  "id": "dev_merge_intervals",
+  "issue": "merge_intervals leaves touching closed intervals separate and silently accepts reversed endpoints. Merge overlapping or touching intervals after sorting, reject any interval whose start is greater than its end with ValueError, return new [start, end] lists, and do not mutate the input.",
+  "visible_command": "python -m pytest -q tests/test_visible.py",
+  "fail_to_pass": [".grader_tests/test_f2p.py"],
+  "pass_to_pass": [".grader_tests/test_p2p.py"],
+  "test_timeout_seconds": 30
+}

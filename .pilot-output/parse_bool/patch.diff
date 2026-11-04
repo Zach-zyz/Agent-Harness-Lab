@@ -1,0 +1,17 @@
+diff --git a/boolkit/parser.py b/boolkit/parser.py
+index efdf4b0..88f21af 100644
+--- a/boolkit/parser.py
++++ b/boolkit/parser.py
+@@ -1,2 +1,11 @@
+ def parse_bool(value):
+-    return bool(value)
++    if isinstance(value, bool):
++        return value
++    if not isinstance(value, str):
++        raise ValueError(f"invalid boolean value: {value!r}")
++    normalized = value.strip().lower()
++    if normalized in {"true", "yes", "1"}:
++        return True
++    if normalized in {"false", "no", "0"}:
++        return False
++    raise ValueError(f"invalid boolean value: {value!r}")

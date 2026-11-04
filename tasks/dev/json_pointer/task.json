@@ -1,0 +1,8 @@
+{
+  "id": "dev_json_pointer",
+  "issue": "resolve_pointer handles only plain dictionary keys. Implement JSON Pointer traversal: the empty pointer returns the document; non-empty pointers must start with '/'; decode '~1' as '/' and '~0' as '~'; traverse dicts and lists; list indices must be canonical non-negative decimals (0 or no leading zero). Raise KeyError(pointer) for every invalid token, index, container, or pointer.",
+  "visible_command": "python -m pytest -q tests/test_visible.py",
+  "fail_to_pass": [".grader_tests/test_f2p.py"],
+  "pass_to_pass": [".grader_tests/test_p2p.py"],
+  "test_timeout_seconds": 30
+}

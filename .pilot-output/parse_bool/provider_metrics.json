@@ -1,0 +1,20 @@
+{
+  "http_429": 0,
+  "http_5xx": 0,
+  "http_attempts": 0,
+  "logical_calls": 4,
+  "pacing_wait_seconds": 0.0,
+  "provider_requested_wait_seconds": 0.0,
+  "provider_wait_seconds": 0.0,
+  "reasoning_usage_reported_attempts": 0,
+  "reported_reasoning_tokens": 0,
+  "reported_total_tokens": 1450,
+  "request_seconds": 0.0,
+  "reserved_unknown_tokens": 0,
+  "retries": 0,
+  "returned_models": [
+    "deterministic-replay"
+  ],
+  "unknown_usage_attempts": 0,
+  "usage_accounting_complete": true
+}
