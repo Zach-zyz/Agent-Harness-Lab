@@ -1,0 +1,10 @@
+{
+  "max_model_calls": 12,
+  "max_total_tokens": 120000,
+  "max_active_seconds": 1800,
+  "temperature": 0.2,
+  "top_p": 1.0,
+  "max_output_tokens": 4096,
+  "bootstrap_context": true,
+  "auto_test_after_write": true
+}

@@ -1,0 +1,32 @@
+{
+  "schema_version": 1,
+  "policy_id": "hw2-api-evidence-2026-11-07-30min-4096",
+  "total_points": 100,
+  "components": {
+    "implementation_and_robustness": 25,
+    "experiment_completion_and_verifiable_evidence": 30,
+    "ablation_and_failure_analysis": 30,
+    "reproducibility_and_budget_discipline": 15
+  },
+  "recommended_provider": "NVIDIA",
+  "recommended_model": "openai/gpt-oss-20b",
+  "other_compatible_providers_and_models_allowed": true,
+  "fixed_provider_model_settings_within_main_experiments": true,
+  "performance_thresholds": null,
+  "performance_bonus": null,
+  "interview_required": false,
+  "public_dev_task_count": 12,
+  "required_conditions": {
+    "naive_reference": 1,
+    "paired_family": 3
+  },
+  "hard_caps": {
+    "max_model_calls_including_retries": 12,
+    "max_total_tokens": 120000,
+    "max_active_seconds": 1800
+  },
+  "provider_waits_count_in_episode_time": true,
+  "cross_model_token_counts_are_not_equal_compute": true,
+  "staff_grading_requires_student_api_key": false,
+  "required_submission": "hw2-submission.zip"
+}

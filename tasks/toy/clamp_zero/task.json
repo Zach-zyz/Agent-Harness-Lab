@@ -1,0 +1,8 @@
+{
+  "id": "toy_clamp_zero",
+  "issue": "clamp ignores a lower or upper bound when that bound is zero because it uses truthiness checks. Treat None as the only missing bound. Preserve the existing ValueError when lower is greater than upper.",
+  "visible_command": "python -m pytest -q tests/test_visible.py",
+  "fail_to_pass": [".grader_tests/test_f2p.py"],
+  "pass_to_pass": [".grader_tests/test_p2p.py"],
+  "test_timeout_seconds": 30
+}

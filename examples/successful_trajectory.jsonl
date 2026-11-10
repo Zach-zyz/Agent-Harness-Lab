@@ -1,0 +1,5 @@
+{"kind":"model","payload":{"content":"{\"action\":\"read_file\",\"args\":{\"path\":\"package/module.py\"},\"thought\":\"Inspect the named implementation.\"}"}}
+{"kind":"tool","payload":{"name":"read_file","observation":"1: def example(): ..."}}
+{"kind":"model","payload":{"content":"{\"action\":\"write_file\",\"args\":{\"path\":\"package/module.py\",\"content\":\"...\"},\"thought\":\"Apply the smallest source fix.\"}"}}
+{"kind":"tool","payload":{"name":"run_tests","observation":"3 passed"}}
+{"kind":"finish","payload":{"summary":"Visible tests pass after a source-only patch."}}

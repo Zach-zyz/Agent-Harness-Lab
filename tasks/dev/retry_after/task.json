@@ -1,0 +1,8 @@
+{
+  "id": "dev_retry_after",
+  "issue": "parse_retry_after truncates HTTP-date delays and accepts invalid delta-seconds. Accept a string containing either non-negative decimal seconds or an HTTP-date. now must be timezone-aware. Return whole seconds, rounding future date delays up, and clamp past dates to zero. Reject signs, malformed values, non-strings, and naive now with ValueError.",
+  "visible_command": "python -m pytest -q tests/test_visible.py",
+  "fail_to_pass": [".grader_tests/test_f2p.py"],
+  "pass_to_pass": [".grader_tests/test_p2p.py"],
+  "test_timeout_seconds": 30
+}
