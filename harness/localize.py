@@ -164,6 +164,27 @@ def build_context_pack(
         )
         included.append(item["path"])
         used += len(numbered)
+
+    included_tests = []
+    for test_path in test_paths:
+        try:
+            relative_test = test_path.resolve().relative_to(root).as_posix()
+            text = test_path.read_text(encoding="utf-8")
+        except (ValueError, OSError, UnicodeDecodeError):
+            continue
+        numbered = "\n".join(
+            f"{number}: {line}" for number, line in enumerate(text.splitlines(), start=1)
+        )
+        if used + len(numbered) > max_chars:
+            continue
+        sections.append(
+            f"### {relative_test} (visible test; read-only and incomplete, "
+            "the issue is the acceptance contract)\n"
+            f"{numbered or '(empty file)'}"
+        )
+        included_tests.append(relative_test)
+        used += len(numbered)
+
     ranking = "\n".join(
         f"- {item['path']}: score {item['score']}" for item in ranked[:10]
     ) or "- (no source files found)"
@@ -179,5 +200,6 @@ def build_context_pack(
         "included": included,
         "context_chars": used,
         "test_paths": [path.name for path in test_paths],
+        "included_tests": included_tests,
     }
     return prompt, details

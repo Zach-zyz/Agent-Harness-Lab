@@ -70,6 +70,9 @@ def main() -> None:
         assert details["included"] == ["textkit/slug.py", "textkit/__init__.py"], details
         assert "2:     return text.replace(' ', '-')" in prompt
         assert "unrelated.py" not in details["included"]
+        assert details["included_tests"] == ["tests/test_visible.py"], details
+        assert "5:     assert slugify('a b') == 'a-b'" in prompt
+
         assert build_context_pack(root, ISSUE, tests)[0] == prompt  # deterministic
 
         on_text, on_kinds = _first_prompt(root, True)
