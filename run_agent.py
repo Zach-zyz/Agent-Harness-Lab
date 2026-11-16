@@ -95,7 +95,7 @@ def load_config(path: Path) -> dict[str, Any]:
         or max_output_tokens > 4096
     ):
         raise SystemExit("max_output_tokens must be an integer in [1, 4096]")
-    for name in ("bootstrap_context", "auto_test_after_write"):
+    for name in ("bootstrap_context", "auto_test_after_write", "localized_context"):
         if not isinstance(config.get(name, False), bool):
             raise SystemExit(f"Config field {name} must be boolean")
     return config
@@ -181,6 +181,7 @@ def main() -> None:
                 client, budget, args.seed,
                 bootstrap_context=bool(config.get("bootstrap_context", False)),
                 auto_test_after_write=bool(config.get("auto_test_after_write", False)),
+                localized_context=bool(config.get("localized_context", False)),
             )
             state = agent.run(
                 task["issue"], worktree,

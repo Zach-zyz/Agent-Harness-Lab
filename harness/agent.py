@@ -8,7 +8,8 @@ from pathlib import Path
 from typing import Any
 
 from .budget import Budget, BudgetExceeded
-from .localize import extract_failure_summary
+from .localize import build_context_pack, extract_failure_summary, visible_test_paths
+
 from .model_client import ModelClient
 from .state import AgentState
 from .tools import ToolError, ToolRunner
@@ -41,12 +42,14 @@ class RepairAgent:
         *,
         bootstrap_context: bool = False,
         auto_test_after_write: bool = False,
+        localized_context: bool = False,
     ) -> None:
         self.client = client
         self.budget = budget
         self.seed = seed
         self.bootstrap_context = bootstrap_context
         self.auto_test_after_write = auto_test_after_write
+        self.localized_context = localized_context
 
     def run(
         self,
@@ -104,6 +107,15 @@ class RepairAgent:
                         ),
                     }
                 )
+            if self.localized_context:
+                context_pack, localization = build_context_pack(
+                    worktree,
+                    issue,
+                    visible_test_paths(worktree, required_test_command),
+                )
+                state.record("localization", step=0, automatic=True, **localization)
+                messages.append({"role": "user", "content": context_pack})
+
 
             while self.budget.model_calls < self.budget.max_model_calls:
                 self.budget.check()
